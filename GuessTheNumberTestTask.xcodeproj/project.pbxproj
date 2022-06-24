@@ -159,7 +159,6 @@
 				0195F9DEFD3F427DBFC35D11 /* Pods-GuessTheNumberTestTaskTests.debug.xcconfig */,
 				20042282439D80F92C2E297C /* Pods-GuessTheNumberTestTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,6 +170,7 @@
 			buildConfigurationList = 1B6FE7CD2865AAA60000D95D /* Build configuration list for PBXNativeTarget "GuessTheNumberTestTask" */;
 			buildPhases = (
 				F24CE69D06CF88A252CBEDAF /* [CP] Check Pods Manifest.lock */,
+				1B6FE7E92865B19F0000D95D /* ShellScript */,
 				1B6FE79F2865AAA10000D95D /* Sources */,
 				1B6FE7A02865AAA10000D95D /* Frameworks */,
 				1B6FE7A12865AAA10000D95D /* Resources */,
@@ -291,6 +291,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B6FE7E92865B19F0000D95D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		3A0AB5CA20D106F8151E6521 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

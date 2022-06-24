@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -56,12 +57,12 @@
 
 /* Begin PBXFileReference section */
 		07A001DCE797774DE22DF25795031F83 /* Pods-GuessTheNumberTestTask-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GuessTheNumberTestTask-acknowledgements.markdown"; sourceTree = "<group>"; };
-		086C02F79189A93651BD3FE51CD7215E /* Pods_GuessTheNumberTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GuessTheNumberTestTask.framework; path = "Pods-GuessTheNumberTestTask.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		086C02F79189A93651BD3FE51CD7215E /* Pods_GuessTheNumberTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B96384C21BB3505D83993B1D45E9689 /* Pods-GuessTheNumberTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GuessTheNumberTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		14E0790EA9470249745CD4FF0AAD1E32 /* Pods-GuessTheNumberTestTaskTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GuessTheNumberTestTaskTests-dummy.m"; sourceTree = "<group>"; };
 		14E40D190383DAD34686E3EA515D2195 /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		31109516D62BCC91E61A7945D32948AA /* Pods-GuessTheNumberTestTask-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GuessTheNumberTestTask-dummy.m"; sourceTree = "<group>"; };
-		3148F2FE479E2CD9A6BE399C0AD7EB7B /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework; path = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3148F2FE479E2CD9A6BE399C0AD7EB7B /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B0116BA6563528A697240EBE401FEF /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests-umbrella.h"; sourceTree = "<group>"; };
 		3E9EFB913B54B7EA405ECFC055C783FC /* Pods-GuessTheNumberTestTaskTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GuessTheNumberTestTaskTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
@@ -74,10 +75,10 @@
 		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		83C20485713F4DD549DB8288F0C1A6FB /* Pods-GuessTheNumberTestTask-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GuessTheNumberTestTask-umbrella.h"; sourceTree = "<group>"; };
 		95C5BAFD9A6A19083B32B3C9D732E07B /* Pods-GuessTheNumberTestTask-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GuessTheNumberTestTask-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F0B42CEFAC23E61A65D6B9A9E60A950 /* Pods-GuessTheNumberTestTaskTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GuessTheNumberTestTaskTests.modulemap"; sourceTree = "<group>"; };
 		A232FA80AE3DE407D0FFB8402CE1D53D /* Pods-GuessTheNumberTestTask.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GuessTheNumberTestTask.modulemap"; sourceTree = "<group>"; };
-		A754A331A08DE3C42B0E849863EFD21E /* Pods_GuessTheNumberTestTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GuessTheNumberTestTaskTests.framework; path = "Pods-GuessTheNumberTestTaskTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A754A331A08DE3C42B0E849863EFD21E /* Pods_GuessTheNumberTestTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CC942266D0273769259FECC541EA65 /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C00AA930F6944EE28F80751887AE57C4 /* Pods-GuessTheNumberTestTaskTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GuessTheNumberTestTaskTests-umbrella.h"; sourceTree = "<group>"; };
 		C48E5D7976A2A89E420C2826C403F929 /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,7 +219,6 @@
 			children = (
 				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -332,7 +332,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -747,7 +747,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -764,7 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
