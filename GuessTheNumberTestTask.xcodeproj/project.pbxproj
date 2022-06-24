@@ -13,6 +13,9 @@
 		1B6FE7B32865AAA50000D95D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FE7B12865AAA50000D95D /* LaunchScreen.storyboard */; };
 		1B6FE7BE2865AAA50000D95D /* GuessTheNumberTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE7BD2865AAA50000D95D /* GuessTheNumberTestTaskTests.swift */; };
 		1B6FE7C92865AAA60000D95D /* GuessTheNumberTestTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE7C82865AAA60000D95D /* GuessTheNumberTestTaskUITests.swift */; };
+		55DCE82C98C7862593396662 /* Pods_GuessTheNumberTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F1EFD0EB432013AF4A1C19 /* Pods_GuessTheNumberTestTask.framework */; };
+		6C0225D7C142A43E4FD64930 /* Pods_GuessTheNumberTestTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25787601BF2E1069B89CCFA3 /* Pods_GuessTheNumberTestTaskTests.framework */; };
+		93D53915ECFDCA7179AE3CAE /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B164074596658C17FE9C38C /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0195F9DEFD3F427DBFC35D11 /* Pods-GuessTheNumberTestTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTaskTests/Pods-GuessTheNumberTestTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0B164074596658C17FE9C38C /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6FE7A32865AAA10000D95D /* GuessTheNumberTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheNumberTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6FE7A62865AAA10000D95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B6FE7AA2865AAA10000D95D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +50,13 @@
 		1B6FE7C42865AAA60000D95D /* GuessTheNumberTestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheNumberTestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6FE7C82865AAA60000D95D /* GuessTheNumberTestTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheNumberTestTaskUITests.swift; sourceTree = "<group>"; };
 		1B6FE7CA2865AAA60000D95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20042282439D80F92C2E297C /* Pods-GuessTheNumberTestTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTaskTests.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTaskTests/Pods-GuessTheNumberTestTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		25787601BF2E1069B89CCFA3 /* Pods_GuessTheNumberTestTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		850C6C79592026AE65CB6E2F /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		86AD43DC6E927DAE632BC561 /* Pods-GuessTheNumberTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTask.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTask/Pods-GuessTheNumberTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		99C9B87E8C756AEE1FD71F4A /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6CE868A39D51E4CE55956C0 /* Pods-GuessTheNumberTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTask.debug.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTask/Pods-GuessTheNumberTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		A9F1EFD0EB432013AF4A1C19 /* Pods_GuessTheNumberTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DCE82C98C7862593396662 /* Pods_GuessTheNumberTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0225D7C142A43E4FD64930 /* Pods_GuessTheNumberTestTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D53915ECFDCA7179AE3CAE /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,8 @@
 				1B6FE7BC2865AAA50000D95D /* GuessTheNumberTestTaskTests */,
 				1B6FE7C72865AAA60000D95D /* GuessTheNumberTestTaskUITests */,
 				1B6FE7A42865AAA10000D95D /* Products */,
+				EF78E7F480458C9C07552C08 /* Pods */,
+				4EA15CFD5B10BA70312B4999 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +139,30 @@
 			path = GuessTheNumberTestTaskUITests;
 			sourceTree = "<group>";
 		};
+		4EA15CFD5B10BA70312B4999 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9F1EFD0EB432013AF4A1C19 /* Pods_GuessTheNumberTestTask.framework */,
+				0B164074596658C17FE9C38C /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */,
+				25787601BF2E1069B89CCFA3 /* Pods_GuessTheNumberTestTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF78E7F480458C9C07552C08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6CE868A39D51E4CE55956C0 /* Pods-GuessTheNumberTestTask.debug.xcconfig */,
+				86AD43DC6E927DAE632BC561 /* Pods-GuessTheNumberTestTask.release.xcconfig */,
+				99C9B87E8C756AEE1FD71F4A /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.debug.xcconfig */,
+				850C6C79592026AE65CB6E2F /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig */,
+				0195F9DEFD3F427DBFC35D11 /* Pods-GuessTheNumberTestTaskTests.debug.xcconfig */,
+				20042282439D80F92C2E297C /* Pods-GuessTheNumberTestTaskTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B6FE7CD2865AAA60000D95D /* Build configuration list for PBXNativeTarget "GuessTheNumberTestTask" */;
 			buildPhases = (
+				F24CE69D06CF88A252CBEDAF /* [CP] Check Pods Manifest.lock */,
 				1B6FE79F2865AAA10000D95D /* Sources */,
 				1B6FE7A02865AAA10000D95D /* Frameworks */,
 				1B6FE7A12865AAA10000D95D /* Resources */,
@@ -146,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B6FE7D02865AAA60000D95D /* Build configuration list for PBXNativeTarget "GuessTheNumberTestTaskTests" */;
 			buildPhases = (
+				3A0AB5CA20D106F8151E6521 /* [CP] Check Pods Manifest.lock */,
 				1B6FE7B52865AAA50000D95D /* Sources */,
 				1B6FE7B62865AAA50000D95D /* Frameworks */,
 				1B6FE7B72865AAA50000D95D /* Resources */,
@@ -164,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B6FE7D32865AAA60000D95D /* Build configuration list for PBXNativeTarget "GuessTheNumberTestTaskUITests" */;
 			buildPhases = (
+				F58A683A42014A631D6E950D /* [CP] Check Pods Manifest.lock */,
 				1B6FE7C02865AAA60000D95D /* Sources */,
 				1B6FE7C12865AAA60000D95D /* Frameworks */,
 				1B6FE7C22865AAA60000D95D /* Resources */,
@@ -245,6 +289,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A0AB5CA20D106F8151E6521 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GuessTheNumberTestTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F24CE69D06CF88A252CBEDAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GuessTheNumberTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F58A683A42014A631D6E950D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B6FE79F2865AAA10000D95D /* Sources */ = {
@@ -417,6 +530,7 @@
 		};
 		1B6FE7CE2865AAA60000D95D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6CE868A39D51E4CE55956C0 /* Pods-GuessTheNumberTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -435,6 +549,7 @@
 		};
 		1B6FE7CF2865AAA60000D95D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86AD43DC6E927DAE632BC561 /* Pods-GuessTheNumberTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -453,6 +568,7 @@
 		};
 		1B6FE7D12865AAA60000D95D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0195F9DEFD3F427DBFC35D11 /* Pods-GuessTheNumberTestTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -474,6 +590,7 @@
 		};
 		1B6FE7D22865AAA60000D95D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20042282439D80F92C2E297C /* Pods-GuessTheNumberTestTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -495,6 +612,7 @@
 		};
 		1B6FE7D42865AAA60000D95D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C9B87E8C756AEE1FD71F4A /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,6 +632,7 @@
 		};
 		1B6FE7D52865AAA60000D95D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 850C6C79592026AE65CB6E2F /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

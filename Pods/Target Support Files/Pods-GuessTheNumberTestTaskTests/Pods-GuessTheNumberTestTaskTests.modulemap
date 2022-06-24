@@ -1,0 +1,6 @@
+framework module Pods_GuessTheNumberTestTaskTests {
+  umbrella header "Pods-GuessTheNumberTestTaskTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
