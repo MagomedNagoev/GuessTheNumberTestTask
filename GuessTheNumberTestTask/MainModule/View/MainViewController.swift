@@ -17,21 +17,66 @@ final class MainViewController: UIViewController {
         button.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         return button
     }()
+
+    private var enterTheNumberButton: UIButton = {
+        let button = UIButton()
+        button.blueButton(buttonName: "Enter the Number")
+        button.addTarget(self, action: #selector(enterNumber), for: .touchUpInside)
+        button.isHidden = true
+        button.isEnabled = false
+        button.alpha = 0.75
+        return button
+    }()
+
     private var gameLabel = UILabel(text: "My Awesome Game", textAlignment: .center)
+
+    private var guessTheNumberTextfield: NumberTextField = {
+        let textField = NumberTextField()
+        textField.addTarget(self, action: #selector(setupConfigEnableEnterButton),
+                            for: .allEditingEvents)
+        return textField
+    }()
+
+    var enterTheNumberButtonBottomConstraint: NSLayoutConstraint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupConstraints()
+
+        setupDismissKeyboardGesture()
+        setupKeyboardHiding()
+        hideKeyboardOnTap()
+        setupConfigEnableEnterButton()
     }
 
     @objc
     func startGame() {
-        presenter.tapOnNewGameButton()
+        startGameButton.isHidden = true
+        gameLabel.isHidden = true
+
+        guessTheNumberTextfield.isHidden = false
+        enterTheNumberButton.isHidden = false
+    }
+
+    @objc
+    func enterNumber() {
+        presenter.tapOnEnterTheNumber()
+    }
+
+    @objc
+    func setupConfigEnableEnterButton() {
+        if guessTheNumberTextfield.hasText {
+            enterTheNumberButton.alpha = 1
+            enterTheNumberButton.isEnabled = true
+        }
     }
 
     func setupConstraints() {
         let layoutGuide = view.safeAreaLayoutGuide
+
+        enterTheNumberButtonBottomConstraint =
+            enterTheNumberButton.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: -50)
 
         view.addSubview(gameLabel)
         NSLayoutConstraint.activate([
@@ -51,6 +96,27 @@ final class MainViewController: UIViewController {
                                                    constant: -20),
             startGameButton.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor,
                                                  constant: -50)
+        ])
+
+        view.addSubview(guessTheNumberTextfield)
+        NSLayoutConstraint.activate([
+            guessTheNumberTextfield.topAnchor.constraint(equalTo: layoutGuide.topAnchor,
+                                                 constant: 100),
+            guessTheNumberTextfield.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor,
+                                                  constant: 20),
+            guessTheNumberTextfield.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor,
+                                                   constant: -20)
+        ])
+
+        guard let enterTheNumberButtonBottomConstraint = enterTheNumberButtonBottomConstraint else { return }
+
+        view.addSubview(enterTheNumberButton)
+        NSLayoutConstraint.activate([
+            enterTheNumberButton.topAnchor.constraint(greaterThanOrEqualTo: gameLabel.topAnchor,
+                                                 constant: 15),
+            enterTheNumberButton.leftAnchor.constraint(equalTo: guessTheNumberTextfield.leftAnchor),
+            enterTheNumberButton.rightAnchor.constraint(equalTo: guessTheNumberTextfield.rightAnchor),
+            enterTheNumberButtonBottomConstraint
         ])
     }
 }
