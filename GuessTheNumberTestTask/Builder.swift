@@ -11,10 +11,12 @@ protocol BuilderProtocol {
     func createMainModule(router: RouterProtocol) -> UIViewController
     func createGameModule(router: RouterProtocol,
                           playerHuman: PlayerModel,
-                          playerComputer: PlayerModel) -> UIViewController
+                          playerComputer: ComputerPlayerModel) -> UIViewController
 }
 
 class Builder: BuilderProtocol {
+    
+    // MARK: - Methods
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let view = MainViewController()
         let presenter = MainPresenter(view: view,
@@ -25,7 +27,7 @@ class Builder: BuilderProtocol {
 
     func createGameModule(router: RouterProtocol,
                           playerHuman: PlayerModel,
-                          playerComputer: PlayerModel) -> UIViewController {
+                          playerComputer: ComputerPlayerModel) -> UIViewController {
         let view = GameViewController()
         let presenter = GamePresenter(view: view,
                                       router: router,
