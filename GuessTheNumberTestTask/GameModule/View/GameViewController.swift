@@ -189,49 +189,46 @@ extension GameViewController {
         view.addSubview(topLabel)
         NSLayoutConstraint.activate([
             topLabelTopConstraint,
-            topLabel.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor,
-                                                 constant: 20),
-            topLabel.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor,
-                                                  constant: -20)
+            topLabel.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: 20),
+            topLabel.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: -20),
+            topLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
 
         view.addSubview(guessingPlayerLabel)
         NSLayoutConstraint.activate([
-            guessingPlayerLabel.topAnchor.constraint(equalTo: topLabel.bottomAnchor,
-                                                constant: 20),
+            guessingPlayerLabel.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 20),
             guessingPlayerLabel.leftAnchor.constraint(equalTo: topLabel.leftAnchor),
-            guessingPlayerLabel.rightAnchor.constraint(equalTo: topLabel.rightAnchor)
+            guessingPlayerLabel.rightAnchor.constraint(equalTo: topLabel.rightAnchor),
+            guessingPlayerLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
 
         view.addSubview(computerGuesesNumberLabel)
         NSLayoutConstraint.activate([
             computerGuesesNumberLabel.topAnchor.constraint(
-                equalTo: guessingPlayerLabel.bottomAnchor,
-                constant: 40),
+                equalTo: guessingPlayerLabel.bottomAnchor, constant: 40),
 
             computerGuesesNumberLabel.leftAnchor.constraint(equalTo: topLabel.leftAnchor),
-            computerGuesesNumberLabel.rightAnchor.constraint(equalTo: topLabel.rightAnchor)
+            computerGuesesNumberLabel.rightAnchor.constraint(equalTo: topLabel.rightAnchor),
+            guessingPlayerLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
 
         view.addSubview(humanTipLabel)
         NSLayoutConstraint.activate([
-            humanTipLabel.topAnchor.constraint(equalTo: computerGuesesNumberLabel.bottomAnchor,
+            humanTipLabel.topAnchor.constraint(lessThanOrEqualTo: computerGuesesNumberLabel.bottomAnchor,
                                                constant: 300),
-            humanTipLabel.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor,
-                                                constant: 80),
-            humanTipLabel.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor,
-                                                 constant: -80)
+            humanTipLabel.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: 80),
+            humanTipLabel.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: -80),
+            guessingPlayerLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
 
         view.addSubview(stackView)
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: humanTipLabel.bottomAnchor,
-                                           constant: 10),
+            stackView.topAnchor.constraint(equalTo: humanTipLabel.bottomAnchor, constant: 10),
             stackView.leftAnchor.constraint(equalTo: humanTipLabel.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: humanTipLabel.rightAnchor),
             stackView.heightAnchor.constraint(equalToConstant: 50),
             stackView.bottomAnchor.constraint(lessThanOrEqualTo: layoutGuide.bottomAnchor,
-                                              constant: -80)
+                                              constant: -30)
         ])
 
         }
@@ -284,7 +281,7 @@ extension GameViewController {
 
         view.addSubview(humanTriesLabel)
         NSLayoutConstraint.activate([
-            humanTriesLabel.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 150),
+            humanTriesLabel.topAnchor.constraint(lessThanOrEqualTo: topLabel.bottomAnchor, constant: 150),
             humanTriesLabel.leftAnchor.constraint(equalTo: topLabel.leftAnchor),
             humanTriesLabel.rightAnchor.constraint(equalTo: topLabel.rightAnchor),
             humanTriesLabel.heightAnchor.constraint(equalToConstant: 20)
@@ -300,7 +297,7 @@ extension GameViewController {
 
         view.addSubview(resultLabel)
         NSLayoutConstraint.activate([
-            resultLabel.topAnchor.constraint(greaterThanOrEqualTo: computerTriesLabel.bottomAnchor, constant: 10),
+            resultLabel.topAnchor.constraint(greaterThanOrEqualTo: computerTriesLabel.bottomAnchor, constant: 20),
             resultLabel.leftAnchor.constraint(equalTo: topLabel.leftAnchor),
             resultLabel.rightAnchor.constraint(equalTo: topLabel.rightAnchor),
             resultLabel.heightAnchor.constraint(equalToConstant: 20)
@@ -308,8 +305,8 @@ extension GameViewController {
 
         view.addSubview(mainMenuButton)
         NSLayoutConstraint.activate([
-            mainMenuButton.topAnchor.constraint(equalTo: resultLabel.bottomAnchor,
-                                                 constant: 75),
+            mainMenuButton.topAnchor.constraint(greaterThanOrEqualTo: resultLabel.bottomAnchor,
+                                                 constant: 40),
             mainMenuButton.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor,
                                                   constant: 20),
             mainMenuButton.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor,
