@@ -12,6 +12,7 @@ protocol MainPresenterProtocol: class {
          router: RouterProtocol)
 
     func tapOnEnterTheNumber()
+    func setPlayerHumanNumber(playerNumber: Int)
 }
 
 class MainPresenter: MainPresenterProtocol {
@@ -25,15 +26,21 @@ class MainPresenter: MainPresenterProtocol {
                   router: RouterProtocol) {
         self.view = view
         self.router = router
-        playerComputer?.myNumber = Int.random(in: 1...100)
+        playerComputer = PlayerModel(myNumber: Int.random(in: 1...100))
     }
 
     func tapOnEnterTheNumber() {
-        print("tapOnEnterTheNumber")
+        guard let playerHuman = playerHuman,
+              let playerComputer = playerComputer else { return }
+
+        router?.showGameViewController(playerHuman: playerHuman,
+                                       playerComputer: playerComputer)
+        debugPrint(playerHuman.myNumber,
+                   playerComputer.myNumber)
     }
 
     func setPlayerHumanNumber(playerNumber: Int) {
-        playerHuman?.myNumber = playerNumber
+        playerHuman = PlayerModel(myNumber: playerNumber)
     }
 
 }
