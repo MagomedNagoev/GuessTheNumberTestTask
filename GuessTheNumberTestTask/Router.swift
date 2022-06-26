@@ -10,27 +10,30 @@ import UIKit
 protocol RouterMain {
     var navigationController: UINavigationController? { get set }
     var builder: BuilderProtocol? { get set }
-    func popToRootViewController()
 }
 
 protocol RouterProtocol: RouterMain {
     func initialViewController()
     func showGameViewController(playerHuman: PlayerModel,
-                                playerComputer: PlayerModel)
+                                playerComputer: ComputerPlayerModel)
 }
 
 class Router: RouterProtocol {
+
+    // MARK: - Properties
     var navigationController: UINavigationController?
     var builder: BuilderProtocol?
 
+    // MARK: - Initializers
     init(navigationController: UINavigationController,
          builder: BuilderProtocol) {
         self.navigationController = navigationController
         self.builder = builder
-
+        navigationController.view.backgroundColor = .white
         setupNavigationController()
     }
 
+    // MARK: - Methods
     private func setupNavigationController() {
         navigationController?.navigationBar.isHidden = true
     }
@@ -43,7 +46,7 @@ class Router: RouterProtocol {
     }
 
     func showGameViewController(playerHuman: PlayerModel,
-                                playerComputer: PlayerModel) {
+                                playerComputer: ComputerPlayerModel) {
         guard let gameViewController =
                 builder?.createGameModule(router: self,
                                           playerHuman: playerHuman,
@@ -51,12 +54,6 @@ class Router: RouterProtocol {
 
         if let navigationController = navigationController {
             navigationController.pushViewController(gameViewController, animated: true)
-        }
-    }
-
-    func popToRootViewController() {
-        if let navigationController = navigationController {
-            navigationController.popToRootViewController(animated: true)
         }
     }
 }
