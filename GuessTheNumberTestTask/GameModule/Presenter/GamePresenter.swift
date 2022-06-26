@@ -43,8 +43,8 @@ class GamePresenter: GamePresenterProtocol {
     }
 
     // MARK: - Private properties
-    private var playerHuman: PlayerModel
-    private var playerComputer: ComputerPlayerModel
+    private (set) var playerHuman: PlayerModel
+    private (set) var playerComputer: ComputerPlayerModel
     weak private var view: GameViewProtocol?
     private var router: RouterProtocol?
     private (set) var screenType: ScreenType = ScreenType.computer
@@ -62,7 +62,7 @@ class GamePresenter: GamePresenterProtocol {
     }
 
     // MARK: - Methods
-    func initialDataForPlayers() {
+    private func initialDataForPlayers() {
         switch screenType {
 
         case .player:
