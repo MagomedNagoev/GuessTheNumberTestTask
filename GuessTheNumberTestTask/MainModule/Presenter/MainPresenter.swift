@@ -17,26 +17,29 @@ protocol MainPresenterProtocol: class {
 
 class MainPresenter: MainPresenterProtocol {
 
+    // MARK: - Private properties
     private var playerHuman: PlayerModel?
-    private var playerComputer: PlayerModel?
+    private var playerComputer: ComputerPlayerModel?
     weak private var view: UIViewController?
     private var router: RouterProtocol?
 
+    // MARK: - Initializers
     required init(view: UIViewController,
                   router: RouterProtocol) {
         self.view = view
         self.router = router
-        playerComputer = PlayerModel(myNumber: Int.random(in: 1...100))
+        playerComputer = ComputerPlayerModel(player: PlayerModel(myNumber: Int.random(in: 1...100)))
     }
 
+    // MARK: - Methods
     func tapOnEnterTheNumber() {
         guard let playerHuman = playerHuman,
               let playerComputer = playerComputer else { return }
 
         router?.showGameViewController(playerHuman: playerHuman,
                                        playerComputer: playerComputer)
-        debugPrint(playerHuman.myNumber,
-                   playerComputer.myNumber)
+        print("Debug:",playerComputer.player.myNumber)
+
     }
 
     func setPlayerHumanNumber(playerNumber: Int) {
