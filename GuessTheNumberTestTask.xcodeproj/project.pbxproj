@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B09F5A028689F48004C805A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B09F59F28689F48004C805A /* UIView+Ext.swift */; };
+		1B09F5A52868A238004C805A /* GameViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B09F5A42868A238004C805A /* GameViewController+Ext.swift */; };
 		1B6FE7A72865AAA10000D95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE7A62865AAA10000D95D /* AppDelegate.swift */; };
 		1B6FE7AB2865AAA10000D95D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE7AA2865AAA10000D95D /* MainViewController.swift */; };
 		1B6FE7B02865AAA50000D95D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FE7AF2865AAA50000D95D /* Assets.xcassets */; };
 		1B6FE7B32865AAA50000D95D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FE7B12865AAA50000D95D /* LaunchScreen.storyboard */; };
-		1B6FE7BE2865AAA50000D95D /* GuessTheNumberTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE7BD2865AAA50000D95D /* GuessTheNumberTestTaskTests.swift */; };
+		1B6FE7BE2865AAA50000D95D /* MainModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE7BD2865AAA50000D95D /* MainModuleTest.swift */; };
 		1B6FE7C92865AAA60000D95D /* GuessTheNumberTestTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE7C82865AAA60000D95D /* GuessTheNumberTestTaskUITests.swift */; };
 		1B6FE8072865C8FE0000D95D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE8062865C8FE0000D95D /* Builder.swift */; };
 		1B6FE80C2865C9460000D95D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE80B2865C9460000D95D /* Router.swift */; };
@@ -22,8 +24,7 @@
 		1B6FE8562865F0F50000D95D /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE8552865F0F50000D95D /* PlayerModel.swift */; };
 		1B6FE85F2865F13F0000D95D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE85E2865F13F0000D95D /* GameViewController.swift */; };
 		1B6FE888286603480000D95D /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE887286603480000D95D /* NumberTextField.swift */; };
-		1B6FE88D2866DF080000D95D /* MainView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE88C2866DF080000D95D /* MainView+Keyboard.swift */; };
-		1B6FE8A0286740250000D95D /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE89F286740250000D95D /* ScreenModel.swift */; };
+		1B6FE88D2866DF080000D95D /* MainViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE88C2866DF080000D95D /* MainViewController+Keyboard.swift */; };
 		55DCE82C98C7862593396662 /* Pods_GuessTheNumberTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F1EFD0EB432013AF4A1C19 /* Pods_GuessTheNumberTestTask.framework */; };
 		6C0225D7C142A43E4FD64930 /* Pods_GuessTheNumberTestTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25787601BF2E1069B89CCFA3 /* Pods_GuessTheNumberTestTaskTests.framework */; };
 		93D53915ECFDCA7179AE3CAE /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B164074596658C17FE9C38C /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		0195F9DEFD3F427DBFC35D11 /* Pods-GuessTheNumberTestTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTaskTests/Pods-GuessTheNumberTestTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B164074596658C17FE9C38C /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B09F59F28689F48004C805A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		1B09F5A42868A238004C805A /* GameViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+Ext.swift"; sourceTree = "<group>"; };
 		1B6FE7A32865AAA10000D95D /* GuessTheNumberTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheNumberTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6FE7A62865AAA10000D95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B6FE7AA2865AAA10000D95D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +59,7 @@
 		1B6FE7B22865AAA50000D95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B6FE7B42865AAA50000D95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6FE7B92865AAA50000D95D /* GuessTheNumberTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheNumberTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B6FE7BD2865AAA50000D95D /* GuessTheNumberTestTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheNumberTestTaskTests.swift; sourceTree = "<group>"; };
+		1B6FE7BD2865AAA50000D95D /* MainModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleTest.swift; sourceTree = "<group>"; };
 		1B6FE7BF2865AAA50000D95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6FE7C42865AAA60000D95D /* GuessTheNumberTestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheNumberTestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6FE7C82865AAA60000D95D /* GuessTheNumberTestTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheNumberTestTaskUITests.swift; sourceTree = "<group>"; };
@@ -70,8 +73,7 @@
 		1B6FE8552865F0F50000D95D /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		1B6FE85E2865F13F0000D95D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1B6FE887286603480000D95D /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
-		1B6FE88C2866DF080000D95D /* MainView+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView+Keyboard.swift"; sourceTree = "<group>"; };
-		1B6FE89F286740250000D95D /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
+		1B6FE88C2866DF080000D95D /* MainViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		20042282439D80F92C2E297C /* Pods-GuessTheNumberTestTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTaskTests.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTaskTests/Pods-GuessTheNumberTestTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		25787601BF2E1069B89CCFA3 /* Pods_GuessTheNumberTestTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		850C6C79592026AE65CB6E2F /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +152,7 @@
 		1B6FE7BC2865AAA50000D95D /* GuessTheNumberTestTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B6FE7BD2865AAA50000D95D /* GuessTheNumberTestTaskTests.swift */,
+				1B6FE7BD2865AAA50000D95D /* MainModuleTest.swift */,
 				1B6FE7BF2865AAA50000D95D /* Info.plist */,
 			);
 			path = GuessTheNumberTestTaskTests;
@@ -179,7 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				1B6FE7AA2865AAA10000D95D /* MainViewController.swift */,
-				1B6FE88C2866DF080000D95D /* MainView+Keyboard.swift */,
+				1B6FE88C2866DF080000D95D /* MainViewController+Keyboard.swift */,
+				1B6FE887286603480000D95D /* NumberTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				1B6FE8182865CB140000D95D /* MainPresenter.swift */,
-				1B6FE887286603480000D95D /* NumberTextField.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -198,6 +200,7 @@
 			children = (
 				1B6FE8392865E3690000D95D /* UILabel+Ext.swift */,
 				1B6FE8342865DDCB0000D95D /* UIButton+Ext.swift */,
+				1B09F59F28689F48004C805A /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,7 +210,6 @@
 			children = (
 				1B6FE89B286724060000D95D /* View */,
 				1B6FE899286723F20000D95D /* Presenter */,
-				1B6FE89F286740250000D95D /* ScreenModel.swift */,
 			);
 			path = GameModule;
 			sourceTree = "<group>";
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				1B6FE85E2865F13F0000D95D /* GameViewController.swift */,
+				1B09F5A42868A238004C805A /* GameViewController+Ext.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,11 +484,12 @@
 				1B6FE85F2865F13F0000D95D /* GameViewController.swift in Sources */,
 				1B6FE8562865F0F50000D95D /* PlayerModel.swift in Sources */,
 				1B6FE888286603480000D95D /* NumberTextField.swift in Sources */,
+				1B09F5A52868A238004C805A /* GameViewController+Ext.swift in Sources */,
 				1B6FE8192865CB140000D95D /* MainPresenter.swift in Sources */,
 				1B6FE80C2865C9460000D95D /* Router.swift in Sources */,
 				1B6FE7AB2865AAA10000D95D /* MainViewController.swift in Sources */,
-				1B6FE8A0286740250000D95D /* ScreenModel.swift in Sources */,
-				1B6FE88D2866DF080000D95D /* MainView+Keyboard.swift in Sources */,
+				1B6FE88D2866DF080000D95D /* MainViewController+Keyboard.swift in Sources */,
+				1B09F5A028689F48004C805A /* UIView+Ext.swift in Sources */,
 				1B6FE7A72865AAA10000D95D /* AppDelegate.swift in Sources */,
 				1B6FE84E2865F0E60000D95D /* GamePresenter.swift in Sources */,
 				1B6FE8072865C8FE0000D95D /* Builder.swift in Sources */,
@@ -498,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6FE7BE2865AAA50000D95D /* GuessTheNumberTestTaskTests.swift in Sources */,
+				1B6FE7BE2865AAA50000D95D /* MainModuleTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
