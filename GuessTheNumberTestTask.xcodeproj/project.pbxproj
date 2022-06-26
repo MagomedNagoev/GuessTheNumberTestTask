@@ -23,6 +23,7 @@
 		1B6FE85F2865F13F0000D95D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE85E2865F13F0000D95D /* GameViewController.swift */; };
 		1B6FE888286603480000D95D /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE887286603480000D95D /* NumberTextField.swift */; };
 		1B6FE88D2866DF080000D95D /* MainView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE88C2866DF080000D95D /* MainView+Keyboard.swift */; };
+		1B6FE8A0286740250000D95D /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FE89F286740250000D95D /* ScreenModel.swift */; };
 		55DCE82C98C7862593396662 /* Pods_GuessTheNumberTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F1EFD0EB432013AF4A1C19 /* Pods_GuessTheNumberTestTask.framework */; };
 		6C0225D7C142A43E4FD64930 /* Pods_GuessTheNumberTestTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25787601BF2E1069B89CCFA3 /* Pods_GuessTheNumberTestTaskTests.framework */; };
 		93D53915ECFDCA7179AE3CAE /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B164074596658C17FE9C38C /* Pods_GuessTheNumberTestTask_GuessTheNumberTestTaskUITests.framework */; };
@@ -70,6 +71,7 @@
 		1B6FE85E2865F13F0000D95D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1B6FE887286603480000D95D /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
 		1B6FE88C2866DF080000D95D /* MainView+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView+Keyboard.swift"; sourceTree = "<group>"; };
+		1B6FE89F286740250000D95D /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
 		20042282439D80F92C2E297C /* Pods-GuessTheNumberTestTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTaskTests.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTaskTests/Pods-GuessTheNumberTestTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		25787601BF2E1069B89CCFA3 /* Pods_GuessTheNumberTestTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuessTheNumberTestTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		850C6C79592026AE65CB6E2F /* Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests/Pods-GuessTheNumberTestTask-GuessTheNumberTestTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,8 +205,9 @@
 		1B6FE85A2865F10B0000D95D /* GameModule */ = {
 			isa = PBXGroup;
 			children = (
-				1B6FE84D2865F0E60000D95D /* GamePresenter.swift */,
-				1B6FE85E2865F13F0000D95D /* GameViewController.swift */,
+				1B6FE89B286724060000D95D /* View */,
+				1B6FE899286723F20000D95D /* Presenter */,
+				1B6FE89F286740250000D95D /* ScreenModel.swift */,
 			);
 			path = GameModule;
 			sourceTree = "<group>";
@@ -215,6 +218,22 @@
 				1B6FE8552865F0F50000D95D /* PlayerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1B6FE899286723F20000D95D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1B6FE84D2865F0E60000D95D /* GamePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1B6FE89B286724060000D95D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B6FE85E2865F13F0000D95D /* GameViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4EA15CFD5B10BA70312B4999 /* Frameworks */ = {
@@ -465,6 +484,7 @@
 				1B6FE8192865CB140000D95D /* MainPresenter.swift in Sources */,
 				1B6FE80C2865C9460000D95D /* Router.swift in Sources */,
 				1B6FE7AB2865AAA10000D95D /* MainViewController.swift in Sources */,
+				1B6FE8A0286740250000D95D /* ScreenModel.swift in Sources */,
 				1B6FE88D2866DF080000D95D /* MainView+Keyboard.swift in Sources */,
 				1B6FE7A72865AAA10000D95D /* AppDelegate.swift in Sources */,
 				1B6FE84E2865F0E60000D95D /* GamePresenter.swift in Sources */,
