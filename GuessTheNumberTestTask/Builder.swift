@@ -15,7 +15,7 @@ protocol BuilderProtocol {
 }
 
 class Builder: BuilderProtocol {
-    
+
     // MARK: - Methods
     func createMainModule(router: RouterProtocol) -> UIViewController {
         let view = MainViewController()

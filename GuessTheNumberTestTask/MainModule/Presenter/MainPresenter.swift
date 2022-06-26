@@ -38,7 +38,7 @@ class MainPresenter: MainPresenterProtocol {
 
         router?.showGameViewController(playerHuman: playerHuman,
                                        playerComputer: playerComputer)
-        print("Debug:",playerComputer.player.myNumber)
+        print("Debug:", playerComputer.player.myNumber)
 
     }
 
