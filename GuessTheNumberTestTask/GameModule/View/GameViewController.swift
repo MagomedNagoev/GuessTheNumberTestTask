@@ -9,34 +9,29 @@ import UIKit
 
 final class GameViewController: UIViewController {
 
-    var presenter: GamePresenter!
+    var presenter: GamePresenterProtocol!
 
-    private var topLabel = UILabel(text: "Try № ",
-                                       textAlignment: .center)
+    // MARK: - Private properties
+
+    private var topLabel = UILabel(textAlignment: .center)
     private var guessingPlayerLabel = UILabel(text: "Computer is guessing",
                                               textAlignment: .center)
-    private var computerGuesesNumberLabel = UILabel(text: "Your number is - 80 ?",
-                                                    textAlignment: .center)
+    private var computerGuesesNumberLabel = UILabel(textAlignment: .center)
     private var humanTipLabel = UILabel(text: "My number is ...",
                                         textAlignment: .left)
-    private var computerTipLabel = UILabel(text: "No, my number is less than yours",
-                                        textAlignment: .center)
-    private var humanTriesLabel = UILabel(text: "Your's tries count: ",
-                                          textAlignment: .left)
-    private var computerTriesLabel = UILabel(text: "Computers's tries count: ",
-                                          textAlignment: .left)
-    private var resultLabel = UILabel(text: "Somebody Win",
-                                          textAlignment: .center)
+    private var computerTipLabel = UILabel(textAlignment: .center)
+    private var humanTriesLabel = UILabel(textAlignment: .left)
+    private var computerTriesLabel = UILabel(textAlignment: .left)
+    private var resultLabel = UILabel(textAlignment: .center)
 
     private var guessingTextField: NumberTextField = {
         let textField = NumberTextField()
-        textField.isHidden = false
         return textField
     }()
 
     private var topLabelTopConstraint: NSLayoutConstraint?
 
-    let stackView: UIStackView = {
+    private var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution  = UIStackView.Distribution.fillEqually
         stackView.alignment = UIStackView.Alignment.fill
@@ -46,24 +41,25 @@ final class GameViewController: UIViewController {
 
         return stackView
     }()
+
     private var moreButton: UIButton = {
         let button = UIButton()
         button.comparisonButton(buttonName: ">")
-
+        button.addTarget(self, action: #selector(tapOnMoreNumber), for: .touchUpInside)
         return button
     }()
 
     private var equelButton: UIButton = {
         let button = UIButton()
         button.comparisonButton(buttonName: "=")
-
+        button.addTarget(self, action: #selector(tapOnEquelNumber), for: .touchUpInside)
         return button
     }()
 
     private var lessButton: UIButton = {
         let button = UIButton()
         button.comparisonButton(buttonName: "<")
-
+        button.addTarget(self, action: #selector(tapOnLessNumber), for: .touchUpInside)
         return button
     }()
 
@@ -71,7 +67,7 @@ final class GameViewController: UIViewController {
         let button = UIButton()
         button.blueButton(buttonName: "Guess")
         button.isHidden = false
-
+        button.addTarget(self, action: #selector(guessNumber), for: .touchUpInside)
         return button
     }()
 
@@ -84,18 +80,45 @@ final class GameViewController: UIViewController {
         return button
     }()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupStackView()
-//        setupConstraintsToComputerScreen()
-//        setupConstraintsToPlayerScreen()
+        setupConstraintsToComputerScreen()
+        setupConstraintsToPlayerScreen()
         setupConstraintsToResultScreen()
+        hideKeyboardOnTap()
     }
+
+    // MARK: - Methods
 
     @objc
     func goToMainViewController() {
         presenter.tapOnMainMenu()
+    }
+
+    @objc
+    func tapOnMoreNumber() {
+        presenter.moreNumber()
+    }
+
+    @objc
+    func tapOnLessNumber() {
+        presenter.lessNumber()
+    }
+
+    @objc
+    func tapOnEquelNumber() {
+        presenter.equalNumber()
+    }
+
+    @objc
+    func guessNumber() {
+        if let numberString = guessingTextField.text,
+           let number = Int(numberString) {
+            presenter.compareNumbers(playerGuessNumber: number)
+        }
     }
 
     func setupStackView() {
@@ -104,7 +127,60 @@ final class GameViewController: UIViewController {
         stackView.addArrangedSubview(lessButton)
     }
 
-    func setupConstraintsToComputerScreen() {
+    func setupPlayerScreen() {
+        topLabel.isHidden = false
+        guessingPlayerLabel.isHidden = false
+        computerGuesesNumberLabel.isHidden = true
+        humanTipLabel.isHidden = true
+        computerTipLabel.isHidden = true
+        humanTriesLabel.isHidden = true
+        computerTriesLabel.isHidden = true
+        resultLabel.isHidden = true
+        guessingTextField.isHidden = false
+        stackView.isHidden = true
+        mainMenuButton.isHidden = true
+        guessButton.isHidden = false
+        topLabelTopConstraint?.constant = 75
+        guessingPlayerLabel.text = "You are guessing"
+        view.upAnimate()
+    }
+
+    func setupComputerScreen() {
+        topLabel.isHidden = false
+        guessingPlayerLabel.isHidden = false
+        computerGuesesNumberLabel.isHidden = false
+        humanTipLabel.isHidden = false
+        computerTipLabel.isHidden = true
+        humanTriesLabel.isHidden = true
+        computerTriesLabel.isHidden = true
+        resultLabel.isHidden = true
+        guessingTextField.isHidden = true
+        stackView.isHidden = false
+        mainMenuButton.isHidden = true
+        guessButton.isHidden = true
+    }
+
+    func setupResultScreen() {
+        topLabel.text = "Scores:"
+        topLabel.isHidden = false
+        guessingPlayerLabel.isHidden = true
+        computerGuesesNumberLabel.isHidden = true
+        humanTipLabel.isHidden = true
+        computerTipLabel.isHidden = true
+        humanTriesLabel.isHidden = false
+        computerTriesLabel.isHidden = false
+        resultLabel.isHidden = false
+        guessingTextField.isHidden = true
+        stackView.isHidden = true
+        mainMenuButton.isHidden = false
+        guessButton.isHidden = true
+        view.upAnimate()
+    }
+}
+
+// MARK: Constraints
+extension GameViewController {
+    private func setupConstraintsToComputerScreen() {
 
         let layoutGuide = view.safeAreaLayoutGuide
         topLabelTopConstraint = topLabel.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 50)
@@ -160,25 +236,12 @@ final class GameViewController: UIViewController {
 
         }
 
-    func setupConstraintsToPlayerScreen() {
+    private func setupConstraintsToPlayerScreen() {
         let layoutGuide = view.safeAreaLayoutGuide
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
         stackView.addArrangedSubview(guessingTextField)
-
-        topLabelTopConstraint = topLabel.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 50)
-        guard let topLabelTopConstraint = topLabelTopConstraint else { return }
-
-        view.addSubview(topLabel)
-        NSLayoutConstraint.activate([
-            topLabelTopConstraint,
-            topLabel.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor,
-                                                 constant: 20),
-            topLabel.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor,
-                                                  constant: -20),
-            topLabel.heightAnchor.constraint(equalToConstant: 20)
-        ])
 
         view.addSubview(guessingPlayerLabel)
         NSLayoutConstraint.activate([
@@ -216,21 +279,8 @@ final class GameViewController: UIViewController {
         ])
     }
 
-    func setupConstraintsToResultScreen() {
+    private func setupConstraintsToResultScreen() {
         let layoutGuide = view.safeAreaLayoutGuide
-
-        topLabelTopConstraint = topLabel.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 50)
-        guard let topLabelTopConstraint = topLabelTopConstraint else { return }
-
-        view.addSubview(topLabel)
-        NSLayoutConstraint.activate([
-            topLabelTopConstraint,
-            topLabel.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor,
-                                                 constant: 20),
-            topLabel.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor,
-                                                  constant: -20),
-            topLabel.heightAnchor.constraint(equalToConstant: 20)
-        ])
 
         view.addSubview(humanTriesLabel)
         NSLayoutConstraint.activate([
@@ -267,5 +317,35 @@ final class GameViewController: UIViewController {
             mainMenuButton.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor,
                                                     constant: -50)
         ])
+    }
+}
+
+// MARK: - Extension
+extension GameViewController: GameViewProtocol {
+    func missClick() {
+        callAlert(message: "Please click other button")
+    }
+
+    func setDataToResultScreen(humanTries: Int,
+                               computerTries: Int,
+                               resultGame: String) {
+        humanTriesLabel.text = "Your's tries count: \(humanTries)"
+        computerTriesLabel.text = "Computers's tries count: \(computerTries)"
+        resultLabel.text = resultGame
+    }
+
+    func setDataToPlayerScreen(attempts: Int,
+                               comparisonResult: String) {
+        if computerTipLabel.isHidden {
+            computerTipLabel.isHidden = false
+        }
+
+        topLabel.text = "Try № \(attempts)"
+        computerTipLabel.text = "No, my number is \(comparisonResult) than yours"
+    }
+
+    func setDataToComputerScreen(attempts: Int, guessNumber: Int) {
+        topLabel.text = "Try № \(attempts)"
+        computerGuesesNumberLabel.text = "Your number is - \(guessNumber) ?"
     }
 }
