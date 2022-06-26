@@ -11,6 +11,8 @@ final class MainViewController: UIViewController {
 
     var presenter: MainPresenterProtocol!
 
+    // MARK: - Private properties
+
     private var startGameButton: UIButton = {
         let button = UIButton()
         button.blueButton(buttonName: "Start New Game")
@@ -28,7 +30,11 @@ final class MainViewController: UIViewController {
         return button
     }()
 
-    private var gameLabel = UILabel(text: "My Awesome Game", textAlignment: .center)
+    private var gameLabel: UILabel = {
+        let label = UILabel(text: "My Awesome Game", textAlignment: .center)
+        label.isHidden = false
+        return label
+    }()
 
     private var guessTheNumberTextfield: NumberTextField = {
         let textField = NumberTextField()
@@ -39,6 +45,7 @@ final class MainViewController: UIViewController {
 
     var enterTheNumberButtonBottomConstraint: NSLayoutConstraint?
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -48,6 +55,7 @@ final class MainViewController: UIViewController {
         setupKeyboardHiding()
     }
 
+    // MARK: - Methods
     @objc
     func startGame() {
         startGameButton.isHidden = true
@@ -55,6 +63,7 @@ final class MainViewController: UIViewController {
 
         guessTheNumberTextfield.isHidden = false
         enterTheNumberButton.isHidden = false
+        view.upAnimate()
     }
 
     @objc
@@ -73,12 +82,15 @@ final class MainViewController: UIViewController {
             enterTheNumberButton.isEnabled = true
         }
     }
+}
 
+// MARK: - Constraints
+extension MainViewController {
     func setupConstraints() {
         let layoutGuide = view.safeAreaLayoutGuide
 
         enterTheNumberButtonBottomConstraint =
-            enterTheNumberButton.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: -50)
+            enterTheNumberButton.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: -55)
 
         view.addSubview(gameLabel)
         NSLayoutConstraint.activate([
