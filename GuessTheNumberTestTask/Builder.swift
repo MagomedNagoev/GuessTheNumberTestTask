@@ -9,6 +9,9 @@ import UIKit
 
 protocol BuilderProtocol {
     func createMainModule(router: RouterProtocol) -> UIViewController
+    func createGameModule(router: RouterProtocol,
+                          playerHuman: PlayerModel,
+                          playerComputer: PlayerModel) -> UIViewController
 }
 
 class Builder: BuilderProtocol {
@@ -16,6 +19,18 @@ class Builder: BuilderProtocol {
         let view = MainViewController()
         let presenter = MainPresenter(view: view,
                                       router: router)
+        view.presenter = presenter
+        return view
+    }
+
+    func createGameModule(router: RouterProtocol,
+                          playerHuman: PlayerModel,
+                          playerComputer: PlayerModel) -> UIViewController {
+        let view = GameViewController()
+        let presenter = GamePresenter(view: view,
+                                      router: router,
+                                      playerHuman: playerHuman,
+                                      playerComputer: playerComputer)
         view.presenter = presenter
         return view
     }
