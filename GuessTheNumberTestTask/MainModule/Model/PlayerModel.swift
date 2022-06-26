@@ -7,29 +7,25 @@
 
 import Foundation
 
-enum PlayerType {
-    case computer
-    case human
+enum ResultType: String {
+    case lose = "Computer Win"
+    case win = "You Win"
+    case draw = "Nobody won. Play again?"
 }
 
 enum ComparisonOperator: String {
     case equal
     case less
     case more
-
-    func getOperatorSign() -> String {
-        switch self {
-        case .equal:
-            return "="
-        case .less:
-            return "<"
-        case .more:
-            return ">"
-        }
-    }
 }
 
 struct PlayerModel {
-    var attemptsToGuess: Int = 0
+    var attemptsToGuess: Int = 1
     var myNumber: Int
+}
+
+struct ComputerPlayerModel {
+    var player: PlayerModel
+    var minGuessingNumber = 0
+    var maxGuessingNumber = 100
 }
