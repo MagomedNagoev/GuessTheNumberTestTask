@@ -12,7 +12,7 @@ extension UIButton {
         self.backgroundColor = .systemBlue
         self.setTitle(buttonName, for: .normal)
         self.setTitleColor(.white, for: .normal)
-        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         self.titleLabel?.numberOfLines = 1
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = 10
@@ -24,7 +24,7 @@ extension UIButton {
         self.layer.borderColor = UIColor.black.cgColor
         self.setTitleColor(.black, for: .normal)
         self.setTitle(buttonName, for: .normal)
-        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         self.titleLabel?.numberOfLines = 1
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = 10
