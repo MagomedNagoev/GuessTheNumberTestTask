@@ -11,9 +11,8 @@ final class NumberTextField: UITextField, UITextFieldDelegate {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        setupTextField()
         delegate = self
+        setupTextField()
     }
 
     required init?(coder: NSCoder) {
