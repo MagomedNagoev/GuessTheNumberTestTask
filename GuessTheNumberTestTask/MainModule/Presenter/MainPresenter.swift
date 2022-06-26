@@ -18,7 +18,7 @@ protocol MainPresenterProtocol: class {
 class MainPresenter: MainPresenterProtocol {
 
     // MARK: - Private properties
-    private var playerHuman: PlayerModel?
+    private (set) var playerHuman: PlayerModel?
     private var playerComputer: ComputerPlayerModel?
     weak private var view: UIViewController?
     private var router: RouterProtocol?
