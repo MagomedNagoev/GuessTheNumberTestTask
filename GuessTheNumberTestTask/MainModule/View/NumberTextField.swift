@@ -9,6 +9,7 @@ import UIKit
 
 final class NumberTextField: UITextField, UITextFieldDelegate {
 
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         delegate = self
@@ -19,6 +20,7 @@ final class NumberTextField: UITextField, UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Methods
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
