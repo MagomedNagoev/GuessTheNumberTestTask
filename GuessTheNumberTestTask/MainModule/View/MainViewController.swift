@@ -32,7 +32,7 @@ final class MainViewController: UIViewController {
 
     private var guessTheNumberTextfield: NumberTextField = {
         let textField = NumberTextField()
-        textField.addTarget(self, action: #selector(setupConfigEnableEnterButton),
+        textField.addTarget(self, action: #selector(textFieldTarget),
                             for: .allEditingEvents)
         return textField
     }()
@@ -46,8 +46,6 @@ final class MainViewController: UIViewController {
 
         setupDismissKeyboardGesture()
         setupKeyboardHiding()
-        hideKeyboardOnTap()
-        setupConfigEnableEnterButton()
     }
 
     @objc
@@ -61,11 +59,15 @@ final class MainViewController: UIViewController {
 
     @objc
     func enterNumber() {
-        presenter.tapOnEnterTheNumber()
+        if let numberString = guessTheNumberTextfield.text,
+           let numberInt = Int(numberString) {
+            presenter.setPlayerHumanNumber(playerNumber: numberInt)
+            presenter.tapOnEnterTheNumber()
+        }
     }
 
     @objc
-    func setupConfigEnableEnterButton() {
+    func textFieldTarget() {
         if guessTheNumberTextfield.hasText {
             enterTheNumberButton.alpha = 1
             enterTheNumberButton.isEnabled = true
@@ -95,7 +97,7 @@ final class MainViewController: UIViewController {
             startGameButton.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor,
                                                    constant: -20),
             startGameButton.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor,
-                                                 constant: -50)
+                                                    constant: -50)
         ])
 
         view.addSubview(guessTheNumberTextfield)
