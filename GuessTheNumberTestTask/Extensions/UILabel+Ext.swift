@@ -9,12 +9,13 @@ import UIKit
 
 extension UILabel {
 
-    convenience init(text: String, textAlignment: NSTextAlignment) {
+    convenience init(text: String = "", textAlignment: NSTextAlignment) {
         self.init(frame: .zero)
         self.text = text
-        self.font = UIFont.boldSystemFont(ofSize: 16)
+        self.font = UIFont.systemFont(ofSize: 16)
         self.textColor = .black
         self.textAlignment = textAlignment
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.isHidden = true
     }
 }
